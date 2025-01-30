@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js19 - แท็บเนื้อหา</title>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body>
+    <h3>แท็บเนื้อหา</h3>
+    <button onclick="showTab(0)">แท็บ 1</button>
+    <button onclick="showTab(1)">แท็บ 2</button>
+
+    <div class="tab-content">เนื้อหาแท็บที่ 1</div>
+    <div class="tab-content">เนื้อหาแท็บที่ 2</div>
+
+    <script>
+        function showTab(index) {
+            document.querySelectorAll(".tab-content").forEach((tab, i) => {
+                tab.classList.toggle("active", i === index);
+            });
+        }
+        showTab(0); // แสดงแท็บแรกตอนโหลดหน้าเว็บ
+    </script>
+</body>
+</html>

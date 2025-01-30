@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js14 - Digital Clock</title>
+    <style>
+        .clock {
+            font-size: 2em;
+            font-family: monospace;
+            padding: 10px;
+            border: 2px solid #333;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h3>นาฬิกาดิจิทอล</h3>
+    <div id="clock" class="clock"></div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById("clock").textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
