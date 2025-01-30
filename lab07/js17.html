@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js17 - ฟอร์มตรวจสอบความถูกต้อง</title>
+</head>
+<body>
+    <h3>ฟอร์มตรวจสอบความถูกต้อง</h3>
+    <form onsubmit="return validateForm()">
+        อีเมล: <input type="email" id="email"><br>
+        รหัสผ่าน: <input type="password" id="password"><br>
+        <button type="submit">ส่งข้อมูล</button>
+    </form>
+    <p id="error" style="color:red;"></p>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            if (email === "" || password === "") {
+                document.getElementById("error").textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
