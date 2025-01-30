@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js11 - ปุ่มเปลี่ยนสี</title>
+</head>
+<body>
+    <h3>ปุ่มเปลี่ยนสี</h3>
+    <button onclick="changeColor()">เปลี่ยนสี</button>
+    <div id="colorBox" style="width: 100px; height: 100px; border: 2px solid black;"></div>
+
+    <script>
+        // ฟังก์ชันสุ่มสี RGB
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        // ฟังก์ชันเปลี่ยนสี
+        function changeColor() {
+            document.getElementById("colorBox").style.backgroundColor = getRandomColor();
+        }
+    </script>
+</body>
+</html>
