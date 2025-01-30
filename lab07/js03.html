@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js03 - คำนวณพื้นที่สี่เหลี่ยม</title>
+</head>
+<body>
+    <h3>คำนวณพื้นที่สี่เหลี่ยม</h3>
+    กว้าง: <input type="number" id="width"><br>
+    ยาว: <input type="number" id="length"><br>
+    <button onclick="calculateArea()">คำนวณ</button>
+    <p id="result"></p>
+
+    <script>
+        // ฟังก์ชันคำนวณพื้นที่สี่เหลี่ยม
+        function calculateArea() {
+            let width = document.getElementById("width").value;
+            let length = document.getElementById("length").value;
+            let area = width * length;
+            document.getElementById("result").textContent = "พื้นที่สี่เหลี่ยม = " + area + " ตารางหน่วย";
+        }
+    </script>
+</body>
+</html>
