@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js13 - รายการซื้อของ</title>
+</head>
+<body>
+    <h3>รายการซื้อของ</h3>
+    <input type="text" id="itemInput" placeholder="เพิ่มสินค้า">
+    <button onclick="addItem()">เพิ่ม</button>
+    <ul id="shoppingList"></ul>
+
+    <script>
+        function addItem() {
+            const input = document.getElementById("itemInput");
+            const itemName = input.value.trim();
+            if (itemName !== "") {
+                const li = document.createElement("li");
+                li.textContent = itemName;
+                document.getElementById("shoppingList").appendChild(li);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
